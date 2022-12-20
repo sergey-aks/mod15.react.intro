@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="app"> </div>
+      
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     
+   <script type="text/babel">
+    class BlogPost extends React.Component {
+        render() {
+            return (
+                <article>
+                    <Title/>
+                    <button>Close</button>
+                    <Content/>
+                </article>
+            )
+        }
+    }
+
+    class Title extends React.Component {
+        render() {
+            return (
+                <h1>
+                    My Blogpost
+                </h1>
+            )
+        }
+    }
+
+    class Content extends React.Component {
+        render() {
+            return (
+                <ul>
+                <li>Theme 1</li>
+                <li>Theme 2</li>
+                </ul>
+            )
+        }
+    }
+
+
+    ReactDOM.render(
+        <BlogPost />,
+        document.getElementById("app")
+    )
+   </script>
+</body>
+</html>

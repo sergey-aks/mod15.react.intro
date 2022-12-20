@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="app"> </div>
+      
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     
+   <script type="text/babel">
+    class List extends React.Component {
+        render() {
+            const elems = ['Раз', 'Два', 'Три']
+            return (
+                <ul>
+                    {elems.map(item =>
+                        <li key={item}>{item}</li>
+                    )}
+                </ul>
+            )
+        }
+    }
+
+
+    ReactDOM.render(
+        <List />,
+        document.getElementById("app")
+    )
+   </script>
+</body>
+</html>
